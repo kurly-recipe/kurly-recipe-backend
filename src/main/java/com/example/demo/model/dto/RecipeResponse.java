@@ -12,10 +12,14 @@ import java.util.List;
 public class RecipeResponse {
 
     private Long id;
+    private String name;
+    private String cursor;
     private List<ProductResponse> productList;
 
     @QueryProjection
-    public RecipeResponse(Long id){
+    public RecipeResponse(Long id, String name, String cursor){
         this.id = id;
+        this.name = name;
+        this.cursor = cursor;
     }
 }
